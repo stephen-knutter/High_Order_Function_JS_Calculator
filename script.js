@@ -1,37 +1,3 @@
-/*
-function addTotal(a,b){
-  return a+b;
-}
-
-function subtractTotal(a,b){
-  return a-b;
-}
-
-function multiplyTotal(a,b){
-  return a*b;
-}
-
-function divideTotal(a,b){
-  return a/b;
-}
-
-var cache = {type: null, a: null, b: null};
-
-function calculate(fn,a,b){
-  console.log(fn(a,b));
-}
-
-calculate(multiplyTotal,10,10);
-
-var numBtns = document.getElementsByClassName("numBtn");
-numBtns.onclick=function(){
-  alert(this)
-}
-*/
-
-
-
-
 var calculator = {
   screen: null,
   numBtns: null,
