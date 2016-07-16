@@ -23,16 +23,17 @@ var calculator = {
       var num1 = this.items.num1;
       var num2 = this.items.num2;
       var operator = this.items.operator;
+      var itemId = item.childNodes[1].getAttribute("id");
       //NO ITEMS
       if(type === 'num'){
-        var itemId = parseInt(item.childNodes[1].getAttribute("id"));
+        var itemId = parseInt(itemId);
         if((!num1 && !num2) || (!num1)){
           this.items.num1 = itemId;
         } else if(!num2){
           this.items.num2 = itemId;
         }
       } else if(type === 'calc'){
-        var itemId = item.childNodes[1].getAttribute("id");
+
         if(!operator){
           this.items.operator = itemId;
         }
@@ -62,7 +63,6 @@ calculator.init = function(){
   //NUMBER BTNs CLICK HANDLER
   for(var i=0; i < calculator.numBtns.length; i++){
     calculator.numBtns[i].addEventListener('click', function(){
-      console.log(this.childNodes[1].getAttribute("id"))
       calculator.numBtn = this;
       calculator.addCache(this,'num');
     }, false);
