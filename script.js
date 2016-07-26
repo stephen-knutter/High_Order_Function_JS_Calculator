@@ -6,19 +6,19 @@ var calculator = {
   calcBtn: null,
   enterBtn: null,
   items: {num1:null,operator:null,num2:null},
-  add: function(a,b){
+  add(a,b){
     return a+b;
   },
-  minus: function(a,b){
+  minus(a,b){
     return a-b;
   },
-  times: function(a,b){
+  times(a,b){
     return a*b;
   },
-  divide: function(a,b){
+  divide(a,b){
     return a/b;
   },
-  addCache: function(item,type){
+  addCache(item,type){
       //this.items = [];
       var num1 = this.items.num1;
       var num2 = this.items.num2;
@@ -40,7 +40,7 @@ var calculator = {
       }
       this.screen.innerHTML = itemId;
   },
-  checkCache: function(){
+  checkCache(){
     var num1 = this.items.num1;
     var num2 = this.items.num2;
     var operator = this.items.operator;
